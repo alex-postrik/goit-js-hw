@@ -1,5 +1,5 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 import { galleryItems } from './gallery-items';
 
@@ -13,10 +13,10 @@ function createGalleryCard(img) {
   return img
     .map(({ preview, original, description }) => {
       return `
-      
+      <ul>
        <li><a class="gallery__item" href="${original}">
        <img class="gallery__image" src="${preview}" alt="${description}"/>
-       </a></li>
+       </a></li>  </ul>
         `;
     })
     .join('');
