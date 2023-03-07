@@ -13,9 +13,10 @@ function createGalleryCard(img) {
   return img
     .map(({ preview, original, description }) => {
       return `
+      <ul class="gallery__list">
        <li><a class="gallery__item" href="${original}">
        <img class="gallery__image" src="${preview}" alt="${description}"/>
-       </a></li>
+       </a></li>  </ul>
         `;
     })
     .join('');
